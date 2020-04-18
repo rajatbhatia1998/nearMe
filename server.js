@@ -20,6 +20,10 @@ mongoose.connect(uri,{ useNewUrlParser: true ,useUnifiedTopology: true},(error)=
 const user = require('./routes/user')
 const room = require('./routes/room')
 
+app.use(express.static(path.join(__dirname, '../build')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './client/build'))
+})
 app.use('/api/user',user)
 app.use('/api/room',room)
 
