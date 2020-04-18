@@ -20,15 +20,19 @@ mongoose.connect(uri,{ useNewUrlParser: true ,useUnifiedTopology: true},(error)=
 const user = require('./routes/user')
 const room = require('./routes/room')
 
-app.use(express.static(path.join(__dirname, '../build')))
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './client/build'))
-})
+
 app.use('/api/user',user)
 app.use('/api/room',room)
 
 
+if(process.env.NODE_ENV==='production'){
+    
+    app.use(express.static('client/build'))
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    });
 
+}
 
 
 const port  = 4000
