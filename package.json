@@ -12,7 +12,7 @@
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "engines":{
-    "node":"8.11.1"
+    "node":"12.16.x"
   },
   "author": "Rajat Bhatia",
   "license": "ISC",
