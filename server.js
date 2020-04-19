@@ -3,7 +3,7 @@ const app  = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const uri = require('./config/mongoUri')
-
+var path = require('path');
 
 //Setting Up the bodyparser and mongoose
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -26,12 +26,13 @@ app.use('/api/room',room)
 
 
 if(process.env.NODE_ENV==='production'){
-    app.use(express.static(path.join(__dirname, "client/build")));
-    app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-    });
+  
 
 }
+app.use(express.static(path.join(__dirname, "client/build")));
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 
 
