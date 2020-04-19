@@ -10,13 +10,6 @@
     "mongoose": "^5.8.1",
     "validator": "^12.1.0"
   },
-  "now": {
-    "alias":"coders-connect",
-    "name": "coders-connect",
-    "env": {
-      "PORT": "5000"
-    }
-  },
   "devDependencies": {},
   "scripts": {
     "start": "node server.js",
