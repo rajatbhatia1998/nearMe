@@ -82,6 +82,8 @@ export default function Room(props) {
       alert("Room Joined")
       dispatch({type:"GET_USER",payload:{id:user.id}})
       setOpen(false)
+      window.location.reload()
+      
      }
    }).catch(err=>console.log(err))
   }
@@ -113,8 +115,8 @@ export default function Room(props) {
         <div id="room">
 
         <Segment placeholder>
-        <Grid columns={2} stackable textAlign='center'>
-          <Divider vertical>Or</Divider>
+          <Grid columns={2} stackable textAlign='center'>
+            <Divider vertical>Or</Divider>
     
           <Grid.Row verticalAlign='middle'>
           
