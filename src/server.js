@@ -2,7 +2,7 @@ const express = require('express')
 const app  = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const uri = require('./config/mongoUri')
+const uri = require('../config/mongoUri')
 var path = require('path');
 
 //Setting Up the bodyparser and mongoose
@@ -17,8 +17,8 @@ mongoose.connect(uri,{ useNewUrlParser: true ,useUnifiedTopology: true},(error)=
 })
 
 //Api Routes
-const user = require('./routes/user')
-const room = require('./routes/room')
+const user = require('../routes/user')
+const room = require('../routes/room')
 
 
 app.use('/api/user',user)
