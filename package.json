@@ -1,27 +1,34 @@
 {
-  "name": "nearme",
+  "name": "near me",
   "version": "1.0.0",
-  "description": "",
+  "description": "Platform to keep track on locaction",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.1",
+    "validator": "^12.1.0"
+  },
+  "now": {
+    "alias":"coders-connect",
+    "name": "coders-connect",
+    "env": {
+      "PORT": "5000"
+    }
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "server": "nodemon server.js",
-    "client-run": "cd client && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client-run\"",
+    "deploy": "now --public",
+    "client-install": "npm install --prefix client",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "engines":{
-    "node":"12.16.x"
+    "node":"8.11.1"
   },
   "author": "Rajat Bhatia",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.9.7"
-  },
-  "devDependencies": {
-    "concurrently": "^5.1.0"
-  }
+  "license": "ISC"
 }
