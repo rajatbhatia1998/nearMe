@@ -1,0 +1,90 @@
+.App {
+  display: block;
+  text-align: center;
+  height: 100vh;
+}
+header{
+  background: black;
+  color: white;
+  padding:20px;
+  font-size:30px;
+}
+.loginPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+}
+#loginForm{
+  padding: 100px;
+}
+
+.marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  user-select: none;
+  transform: translate(-50%, -50%);
+  
+}
+.avatar{
+  float: left;
+}
+#room{
+  display: block;
+  padding: 10px;
+}
+#roomDetails{
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#menu-btn{
+  background: black;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  padding: 3px;
+  cursor: pointer;
+  top: 0;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 1000;
+  outline: none;
+  border: 0;
+}
+
+#menu-btn:after {
+  content: "";
+  background: rgb(246, 248, 246);
+  display: block;
+  position: absolute;
+  padding-top: 350%;
+  padding-left: 320%;
+  margin-left: -50px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#menu-btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
