@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client-run": "cd cl && npm start",
+    "client-run": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client-run\"",
-    "heroku-postbuild": "cd cl && npm install  && npm run build"
+    "heroku-postbuild": "cd client && npm install  && npm run build"
   },
   "engines": {
     "node": "12.16.x"
