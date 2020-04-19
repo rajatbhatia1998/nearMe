@@ -9,7 +9,7 @@
     "server": "nodemon server.js",
     "client-run": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client-run\"",
-    "heroku-postbuild":  "NPM_CONFIG_PRODUCTION=false cd client && npm install  && cd client && npm run build"
+    "heroku-postbuild":  " cd client && npm install  && cd client && npm run build"
   },
   "engines":{
     "node":"12.16.x"
