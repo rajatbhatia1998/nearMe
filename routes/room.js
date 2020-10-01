@@ -6,6 +6,7 @@ var User = require('../model/UserModel')
 
 //Route@ api/room/createRoom
 //Create new room
+//
 //Type POST
 router.post('/createRoom',(req,res)=>{
     var password = req.body.password
