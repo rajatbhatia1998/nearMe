@@ -18,7 +18,7 @@ mongoose.connect(uri,{ useNewUrlParser: true ,useUnifiedTopology: true},(error)=
     }
 })
 
-//Api Routes
+//Api Route
 const user = require('./routes/user')
 const room = require('./routes/room')
 
