@@ -10,7 +10,11 @@
     "client-run": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client-run\"",
     "heroku-postbuild": "cd cl && npm install  && npm run build"
-  }
+  
+},
+  "engines": {
+    "node": "18.x"
+  },
   "author": "Rajat Bhatia",
   "license": "ISC",
   "dependencies": {
